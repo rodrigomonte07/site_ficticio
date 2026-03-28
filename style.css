@@ -18,7 +18,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -84,7 +84,7 @@ nav{
 	
 }
 	nav img{
-		max-width: 18vw;
+		width: 13vw;
 		padding-left: 80px;
 		padding-bottom: 10px;
 		padding-top: 10px;
