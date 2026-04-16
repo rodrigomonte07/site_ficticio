@@ -1,67 +1,17 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style:none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-a{
-    color: black;
-    text-decoration: none;
-}
-*{
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-/* Início do estilo */
-
 @font-face {
 	font-family: 'One Piece Manga';
 	src: url('one\ piece\ font.ttf') format('Truetype');
 }
 
 body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	font-family: 'One Piece Manga', sans-serif;
-	font-size: 2rem;
+	font-size: 1rem;
 	font-weight: bold;
-	max-height: 100vh;
+	min-height: 100vh;
 	background-image: url('./Gemini_Generated_Image_ouqyynouqyynouqy.PNG');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -84,10 +34,11 @@ nav{
 	
 }
 	nav img{
-		width: 13vw;
+		max-width: 50vw;
 		padding-left: 80px;
 		padding-bottom: 10px;
 		padding-top: 10px;
+		animation: pulsando 2s infinite;
 	}
 	nav ul{
 		display: flex;
@@ -111,19 +62,18 @@ nav{
 
 .inicio{
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	flex-wrap: wrap;
 	align-items: center;
-	
 	background-image: url('https://wallpapers-clan.com/wp-content/uploads/2025/06/one-piece-luffy-fashionable-pirate-desktop-wallpaper-preview.jpg');
+	width: 100%;
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 	height: 100vh;
 	border: 3px solid black;
-
-	div{
+}
+	.inicio div{
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -135,10 +85,10 @@ nav{
 		margin-top: 160px;
 		border: 3px solid black;
 		font-style: italic;	
-		max-width: 50vw;	
+		min-width: 50vw;	
 	}
 
-	h2{
+	.inicio h2{
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -148,7 +98,7 @@ nav{
 	}
 
 
-	p{
+	.inicio p{
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -157,23 +107,22 @@ nav{
 		letter-spacing: 1px;
 	}
 
-	a{
+	.inicio a{
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		padding: 20px 30px;
-		max-width: 30vw;
+		max-width: 50vw;
 		background-color:rgb(110, 4, 4) ;
 		border-radius: 20px;
 		font-size: 2.3rem;
 		letter-spacing: 1px;
-	}
 
 	a:hover{
 		color: white;
 		background-color: #9c2c2e;
 	}
-}
+	}
 
 .meio{
 	display: flex;
@@ -184,7 +133,7 @@ nav{
 	padding: 40px;
 	flex-wrap: wrap;
 	padding-bottom: 80px;
-
+}
 	.texto-hover {
 	display:none; 
 	background-color: rgb(196, 171, 171);
@@ -195,20 +144,18 @@ nav{
 	position: absolute; 
 	text-align: center; 
 	font-size: 1.8rem;
-	}
-
-	.conteudo {
-    position:relative;
 }
 
-	
-	.conteudo:hover .texto-hover {
+.conteudo {
+	position:relative;
+}
+
+.conteudo:hover .texto-hover {
 	display: block; 
 	color: #94181B;
-	}
+}
 	
-
-	h1{
+	.meio h1{
 		display: flex;
 		align-items: center;
 		font-size: 3.5rem;
@@ -216,51 +163,49 @@ nav{
 		padding-top: 100px;
 	}
 
-	ul{
+	.meio ul{
 		display: grid;
-		grid-template-columns: repeat(4,1fr);
+		grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
 		gap: 30px;
 		padding-bottom: 50px;
 		padding-top: 10px;
 	}
 
-	img{
-		display: block ;
-		width: 13vw;
-		height: 50vh;
+	.meio img{
+		width: 18vw;
+		height: 60vh;
 		border-radius: 15px;
 		border: 8px solid rgb(145, 131, 131);
 		transition: transform 0.3s ease;
 	}
 
-	img:hover{
+	.meio img:hover{
 		transform: scale(1.1);
 		
 	}
 
-}
-
 .fim{
 	display: flex;
 	flex-direction: column;
+	flex-wrap: wrap;
 	padding: 60px;
 	padding-top: 100px;
 	padding-bottom: 100px;
 	border: 3px black solid;
 	justify-content: center;
 	align-items: center;
-	
-	div{
+}
+	.fim div{
 		display: flex;
 		flex-direction: column;
 		background-color: rgba(213, 219, 223, 0.363);
 		border-radius: 20px;
 		padding: 30px;
 		border: 5px solid black;
-		width: 70vw;
+		min-width: 40vw;
 	}
 
-	h1{
+	.fim h1{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -268,7 +213,7 @@ nav{
 		padding: 40px;
 	}
 
-	p{
+	.fim p{
 		font-family:'Space Mono',sans-serif;
 		font-style: normal;
 		font-weight: lighter;
@@ -276,9 +221,9 @@ nav{
 		color: rgb(44, 2, 2);
 		font-size: 1.75rem;
 		word-spacing: 2px;
-		letter-spacing: 1px
-	};
-}
+		letter-spacing: 1px;
+	}
+
 
 footer{
 	display: flex;
@@ -287,8 +232,9 @@ footer{
 	justify-content: center;
 	border-top: 3px black solid;
 	padding: 20px;
-
-	p{
+	width: 100%;
+}
+	footer p{
 		font-family:'Space Mono',sans-serif;
 		font-style: normal;
 		font-weight: lighter;
@@ -299,32 +245,78 @@ footer{
 		letter-spacing: 1px;
 	}
 	
-	.diferente{
+	footer.diferente{
 		color: rgb(181, 185, 189);
-		word-spacing: 5px;
-		letter-spacing: 1px;
 		font-size: 1.2rem;
 	}
 	
-	.diferente2{
+	footer.diferente2{
 		color: rgb(181, 185, 189);
-		word-spacing: 5px;
-		letter-spacing: 1px;
 		font-size: 1.2rem;
-		align-self: flex-start;
+		align-items: flex-start;
 		padding-bottom: 0px;
 		padding-left: 0px;
 	}
 
-}
-
-a:hover{
+	a:hover{
 	text-decoration: underline;
 	cursor: grab;
 }
 
-a:active{
+	a:active{
 	color: black;
+}
+
+@keyframes pulsando{
+	0%{
+		transform:scale(1);
+	}
+	50%{
+		transform: scale(1.1);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+@media (min-width: 768px){
+
+	nav{
+		flex-direction: row;
+	}
+
+	nav ul{
+		flex-direction: row;
+		gap: 20px;
+		font-size: 1.5rem;
+	}
+
+	.meio ul{
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.inicio h2{
+		font-size: 2.5rem;
+	}
+
+	.inicio p{
+		font-size: 1.5rem;
+	}
+}
+
+@media (min-width: 1024px){
+
+	.meio ul{
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.inicio div{
+		min-width: 50vw;
+	}
+
+	.fim div{
+		min-width: 40vw;
+	}
 }
 
 
